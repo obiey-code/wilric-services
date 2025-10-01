@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="fr">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>WILRIC SERVICES & DIVERS|Entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore.</title>
+   
+    <meta name="description" content="WILRIC SERVICES & DIVERS, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore."/>
+    <link rel="canonical" href="WILRIC SERVICE" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WILRIC SERVICES & DIVERS - Entreprise de prestation des services qui intervient sur l'ensemble des secteurs public et privé,..." />
+    <meta property="og:description" content="WILRIC SERVICES & DIVERS, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore." />
+    <meta property="og:url" content="WILRIC SERVICE" />
+    <meta property="og:site_name" content="WILRIC SERVICES & DIVERS"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="WILRIC SERVICES & DIVERS, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore." />
+    <meta name="twitter:title" content="WILRIC SERVICES & DIVERS - Entreprise de prestation des services qui intervient sur l'ensemble des secteurs public et privé,..." />
+    
+    <!-- favicon -->
+    <link rel=icon href="hamsterlecurieux/images/LOGO WILRIC.png" sizes="20x20" type="image/png">
+    <!-- animate -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/animate.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/owl.carousel.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/font-awesome.min.css">
+    <!-- flaticon -->
+    <link rel="stylesheet" href="hamsterlecurieux/fonts/flaticon.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/style.css">
+    <link rel="stylesheet" href="hamsterlecurieux/css/slider-css.css">
+    <link rel="stylesheet" href="hamsterlecurieux/css/boostrap-select.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style type="text/css">
+stackpath.bootstrapcdn.com
+
+@import url('fonts.googleapis/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+.slider{
+  position: relative;
+     background: #8080805e;
+  width: 100%;
+  min-height:   50%; 
+  
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img{
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+  
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%;
+     
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+   
+  }
+}
+
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+     
+    li a{text-transform: uppercase;}
+    .backg{background-color: #2eae0c; color: #fff}
+    .backg:hover{background-color: #0f3aaa; color: #fff}
+
+
+
+
+
+
+</style>
+
+<body id="default-home">
+
+    <!-- Header info start -->
+    <section id="header-info"  style="width: 100%; margin: 0 auto;;">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12 " >
+                        <div class="header-top-left  ">
+                            <ul class="d-lg-flex d-md-flex " >
+                                <li >
+                                    <p ><i class="fa fa-phone "> </i>(+242) 05 696 14 35</p>
+
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope"></i>wilricservices@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><a href="localisation.html"><i class="fa fa-map-marker"></i>Pointe-Noire & Brazzaville</a></p>
+                            </ul>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="header-top-right xs-mt-10">
+                            <ul class="d-flex justify-content-lg-end justify-content-center">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-5">
+                        <div class="logo-wrapper " >
+                            <a href="index.html" class="logo">
+                                
+                                <img src="hamsterlecurieux/images/logo_wilric.png" alt="" width="65%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header-open-time">
+                            <ul class="d-flex justify-content-center align-items-center">
+                                <li>
+                                    <div class="header-open-time-icon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-open-time-content">
+                                        <strong>Horaires d&apos;ouverture </strong>
+                                        <span>Lun -Ven: 08:00 - 12:00 - 13:00 - 17:00 </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header info end -->
+
+    <!-- Header start -->
+    <header class="header-area">
+        <div class="container "  >
+            <div class="row align-items-center text-center">
+                <div class="col-lg-12 col-md-12" style="height:50%" >
+                    <div class="header-content"></div>
+                        <a class="header-toggle-menu" style="color:#fff" href="#0" title="Menu"><span><i class="fa fa-bars"></i></span></a>
+                        
+                        <nav class="header-nav-wrap" >
+                            <p class="header-nav-heading h6">Site Navigation</p>
+                            <br/><ul class="header-nav text-center">
+                                <li>
+                                    <a class="active" href="index.html" title="">Accueil</a>
+                                </li>
+                                <li><a href="a-propos.html">A propos</a></li>
+                                <li>
+                                    <a class="" href="nos-metiers.html" title="">Nos métiers</a>
+                                </li>
+                                
+                                <li>
+                                    <a class="" href="contact.html" title="">Contact</a>
+                                </li>
+
+                                <li>
+
+                                    
+                                    <a class="" href="emploi-stage.html">Emploi / stage</a>
+                                </li>
+                            </ul>
+                            <a href="#0" title="Close Menu" class="header-overlay-close close-mobile-menu">Close</a>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+
+
+          <div class="carousel-inner" >
+                                
+                    <div class="carousel-item active" id="abca">
+                      <div class="banner" id="abc"  style="background-image: url('hamsterlecurieux/Admin/uploads/slides/IMG-20250304-WA0077.jpg');"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class=""></h1>
+                            <h2 class=""></h2>
+                            <h3 class=""></h3>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item" id="abca">
+                      <div class="banner" id="abc"   style="background-image: url('hamsterlecurieux/Admin/uploads/slides/téléchargement (4).jpg'); "></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class=""></h1>
+                            <h2 class=""></h2>
+                            <h3 class=""></h3>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="carousel-item" id="abca">
+                      <div class="banner" id="abc"  style="background-image: url('hamsterlecurieux/Admin/uploads/slides/téléchargement.jpg');"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class=""></h1>
+                            <h2 class=""></h2>
+                            <h3 class=""></h3>
+                        </div>
+                    </div>
+
+          </div>
+
+
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+
+
+
+
+
+
+    <!-- Looking-for start  1rem-->
+    <section id="looking-for-section" class="looking-for-area mt-120" data-jarallax='{"speed": 0.6}' >
+        <div class="">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <!-- Contenedor -->
+                        <div class="service-img service-item-cmn" >
+                            <img src="hamsterlecurieux/Admin/uploads/motdudirecteurs/6-Mistakes-Jamaican-Real-Estate-Agents-Make-on-Social-Media-and-How-to-Avoid-Them.jpg" alt="" width="100%" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6" >
+                        <div class="section-title looking-for-content mb-25 xs-mt-50 ">
+                            <h2 class="title text-center" style="font-size: 2em; color: #000;">Vous êtes chez WILRIC SERVICES & DIVERS</h2>
+                            <p class="text" style="text-align: justify; color: #000">Chers visiteurs,
+
+                                Soyez les bienvenu chez nous  ! C'est avec un immense plaisir que notre équipe vous accueille dans notre espace en ligne, où nous nous engageons à vous offrir les services de qualités adaptés à vos besoins et votre budget.
+                                
+                                Chez <b style="color: blue;font-weight:bold">WILRIC SERVICES & DIVERS</b>, nous croyons fermement que notre succès repose sur la satisfaction entière de nos clients et la qualité de nos produits, prestations et services. Notre équipe dédiée à l'excution de l'ensemble des tâches de réalisation de vos projets travaille sans relâche pour vous fournir des solutions innovantes et efficaces, tout en honorant à nos engagements et au respect de votre cahier de charge.
+                                
+                                Nous vous invitons à explorer notre site pour découvrir l'ensemble de nos services, notre expertise et notre engagement envers l'excellence. N'hésitez pas à nous contacter pour toute demande d'information ou pour discuter de la manière dont nous pouvons vous assister.
+                                
+                                Merci de votre confiance et de votre intérêt pour <b style="color: blue;font-weight:bold;">WILRIC SERVICES & DIVERS</b> . Ensemble, construisons un avenir prometteur.<br>
+                                
+                                Cordialement,<br>
+                                </p>
+                            <p class="text" style="text-align: left; color: #000; font-weight:bold">Ingrid ELEKA
+                                PDG, <b style="color: blue;">WILRIC SERVICES & DIVERS</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Looking-for end -->
+        <section id="call-to-section" class="call-to-area mt-115" data-jarallax='{"speed": 0.6}' style="background: url(hamsterlecurieux/images/background-mission.jpg);">
+        <div class="bg-prefix overlay-01">
+            <div class="container">
+                <div class="row align-items-center text-center">
+                    <div class="col-lg-12">
+                        <div class="call-to-content-area text-center">
+                            <div class="call-to-content section-title">
+                                <h2 class="title">Notre <span style="font-weight:bold">MISSION</span> </h2>
+                            </div>
+                            <div class="call-to-btn mt-40">
+                                <p class="text" style="text-align: center; color: #fff; font-size: 1.2em;">La mission de <b style="color: blue;">WILRIC SERVICES & DIVERS </b> est de fournir des prestations et services de qualité répondants aux attentes et aux exigences de ses clients et prospects à des coûts défiants
+                                    toutes concurrences, tout en respectant les principes, règles et normes internationales de protection de l'environnement,
+                                    afin de garantir votre sécurité et votre entière satisfaction, d'optimiser votre productivité et de contribuer à la croissance de votre chiffre d'affaires.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br/>
+    <!-- Looking-for start -->
+    <section id="looking-for-section" class="looking-for-area mt-120" data-jarallax='{"speed": 0.6}' style="background: url(hamsterlecurieux/images/accordion.jpg);">
+        <div class="overlay bg-prefix overlay-02">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <!-- Contenedor -->
+                        <div class="service-img service-item-cmn">
+
+
+
+
+                            
+                            <img src="hamsterlecurieux/images/service/Découvrez-tous-les-avantages-dune-carrière-en-génie-civil.jpg" alt="" width="100%" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="section-title looking-for-content mb-25 xs-mt-50">
+                            <h2 class="title">Pourquoi <span>NOUS CHOISIR?</span> </h2>
+                            <p class="text" style="font-size:1.3em; text-align:justify">En choisissant <b style="color: blue;">WILRIC SERVICES & DIVERS</b>, vous optez pour un partenaire fiable, compétent et engagé à vos côtés pour réaliser vos projets avec succès. Nous serions ravis de vous accompagner dans vos futurs défis et de construire avec vous un partenariat durable.
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Looking-for end -->
+     <!-- partenaire technicque -->
+     <section id="call-to-section" class="call-to-area mt-115" data-jarallax='{"speed": 0.6}' style="background: url(hamsterlecurieux/images/background-mission.jpg);">
+        <div class="bg-prefix overlay-01">
+            <div class="container">
+                <div class="row align-items-center text-center">
+                    <div class="col-lg-12">
+                        <div class="call-to-content-area text-center">
+                            <div class="call-to-content section-title">
+                                <h2 class="title" >Notre <span>PARTENAIRE TECHNIQUE</span>  </h2>
+                            </div>
+                            <div class="">
+                                <br>
+                                <p>
+                                    <a href="#" target="_blank"><img src="hamsterlecurieux/images/partenaire technique/logo G-TEX (1).png" alt="ASECNA" width="15%" height="15%"></a>
+                            
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br/>
+    
+
+   <!-- Client start -->
+    <section id="client-section" class="client-area " data-jarallax='{"speed": 0.6}' style="background: url(hamsterlecurieux/images/clients/clients.jpg);">
+        <div class="bg-prefix">
+            <div class="container">
+                <div class="row">
+                    <div class=" ">
+                        <div class="section-title client-title text-center mb-10"  >
+                            <h2 class="title">Ils nous <span>FONT CONFIANCE</span> </h2>
+                            <p class="text"></p>
+                        </div>
+                        <div class="clear ">
+                        <div class="client-item margin-top centre" >
+                           
+                                <div class="client-img " style="width: 8%;" style="margin-top:10%;border: none;">
+                                </div>
+
+                                    <div class="client-img " style="width: 15%;" style="margin-top:10%;">
+                                    <a href="http://mbservicessarlu.com/" target=""><img src="hamsterlecurieux/Admin/uploads/partenaire/514e9ac1ce013a884b0d1a8ab90b13b6_100x96_fit.png" alt="MB Services"  width="100%" ></a>
+                                </div>
+
+                                    <div class="client-img " style="width: 15%;" style="margin-top:10%;">
+                                    <a href="https://www.coraf.cg/" target="_blank"><img src="hamsterlecurieux/Admin/uploads/partenaire/1646814022599.jpg" alt="Coraf"  width="100%" ></a>
+                                </div>
+                          
+                            
+                                                   
+                                <div class="client-img " style="width: 15%;" style="margin-top:10%;">
+                                <a href="https://www.asecna.aero/index.php/fr/" target="_blank"><img src="hamsterlecurieux/Admin/uploads/partenaire/asecna-logo-large.png" alt="ASECNA" width="100%" ></a>
+                            </div>
+                            
+                            <div class="client-img " style="width: 15%;" style="margin-top:10%;">
+                                <a href="https://www.mtn.cg/" target="_blank"><img src="hamsterlecurieux/Admin/uploads/partenaire/téléchargement.png" alt="MTN Congo" width="100%" ></a>
+                            </div>
+
+                            <div class="client-img "  style="width: 19%;" >
+                                <a href="https://www.wcs.org/" target="_blank"><img src="hamsterlecurieux\Admin\uploads\partenaire\téléchargement (2).png" alt="WCS" width="100%" ></a>
+                            </div>
+                            <div class="client-img " style="width: 8%;" style="margin-top:10%;border: none;">
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client end -->   <!-- blog start  -->
+    
+                            
+    <!-- Blog end --><br/><br/><br/><br/>    <!-- Footer start --><br/>
+    <footer id="footer-section" class="footer-area" >
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6" >
+                    <div class="" >
+                        <a href="index.html" class="logo" style="width: 15%;">
+                            <img src="hamsterlecurieux/images/wilric service NB.png" width="80%" alt="">
+                        </a>
+                    </div>
+                    <div class="">
+                    <div class="footer-widget widget footer-contact solutions ">
+
+                    
+                        <h4  class="widget-title mb-20">Nos coordonnées </h4>
+                        <div class="">
+<p class="email"><i class="fa fa-newspaper"></i> RCCM: CG-PNR-01-2023-B12-00083 </p>
+                            <p class="email"><i class="fa fa-newspaper"></i> NIU: M23000000295227T</p>
+                            <p class="email"><i class="fa fa-envelope"></i> wilricservices@gmail.com</p>
+                            <p class="phone"><i class="fa fa-phone"></i> (+242) 05 696 14 35</p>
+                            <p class="address"><a href="localisation.html"><i class="fa fa-map-marker"></i> 51 Rue d'Ombélé quartier OCH (Arrêt Noëly), Pointe-Noire |
+1234 Rue Mayombe, Avenue Loutassi au Plateau des 15 ans Brazzaville</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+
+                <div class="col-lg-4 col-md-6 text-center" style="margin-top: 10%;">
+                    <div class="footer-widget widget footer-links useful-links xs-mt-50 md-mt-50">
+                        <h4  class="widget-title mb-20 ">Liens utiles </h4>
+                        <div class="">
+                            <ul class="" style="text-transform:none;">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="a-propos.html">A propos</a></li>
+                                <li><a href="nos-metiers.html">Nos métiers</a></li>
+                                
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="emploi-stage.html">Carrière</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-top: 10%;">
+                    <div class="footer-widget widget">
+                        <h4  class="widget-title mb-25 xs-mt-40 md-mt-50 text-center">Horaire d'ouverture </h4>
+
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Lundi</span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 17:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Mardi </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 17:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Mercredi </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 17:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Jeudi </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 17:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Vendredi </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 17:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Samedi </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">08:00 - 12:00</span>
+                            </span>
+                        </div>
+                        <div class="open-time-item d-flex mt-15">
+                            <span class="open-time-day">Dimanche </span>
+                            <span class="open-time-line">
+                                <span class="open-time-line-inner"></span>
+                            </span>
+                            <span class="open-time-hours">
+                                <span class="open-time-closed">Fermé</span>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-area text-center">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright-area-inner">
+                        <p>&copy; 2025  <b style="color: blue;">WILRIC SERVICES & DIVERS </b> - Tous droits réservés | Développé par<a href="https://www.facebook.com/share/p/165xJRNriR/" target="_blank"><b>OBIEY Christ Dany</b></a> </p>
+
+
+
+
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <span class="" ><i class="fa fa-angle-up" ></i></span>
+    </div>
+    
+    <!-- Back to top end -->
+
+    <!-- Preloader start -->
+    <div class="" id="">
+        <div class="">
+            <div class="center">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- jquery -->
+    <script src="hamsterlecurieux/js/jquery-2.2.4.min.js"></script>
+    <script src="hamsterlecurieux/js/jquery.js"></script>
+    <!-- bootstrap -->
+    <script src="hamsterlecurieux/js/bootstrap.min.js"></script>
+    <!-- Popup video -->
+
+    <!-- counterup -->
+    <script src="hamsterlecurieux/js/jquery.counterup.min.js"></script>
+    <!-- main js -->
+    <script src="hamsterlecurieux/js/main.js"></script>
+    
+    <script src="hamsterlecurieux/js/boostrap-select.min.js"></script>
+    
+    <script src=" code.jquery/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
+
+
+    <script>
+        // Video Popup
+        $(function() {
+            $("#video").videoPopup({
+                autoplay: 1,
+                controlsColor: 'white',
+                showVideoInformations: 0,
+                width: 1000,
+                customOptions: {
+                    rel: 0,
+                    end: 60
+                }
+            });
+            $("#video2").videoPopup();
+        });
+
+
+        // Accordion
+        $(function() {
+            var Accordion = function(el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+
+                // Variables privadas
+                var links = this.el.find('.link');
+                // Evento
+                links.on('click', {
+                    el: this.el,
+                    multiple: this.multiple
+                }, this.dropdown)
+            }
+
+            Accordion.prototype.dropdown = function(e) {
+                var $el = e.data.el;
+                $this = $(this),
+                    $next = $this.next();
+
+                $next.slideToggle();
+                $this.parent().toggleClass('open');
+
+                if (!e.data.multiple) {
+                    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                };
+            }
+
+            var accordion = new Accordion($('#accordion'), false);
+        });
+        
+        
+	var handleLightgallery = function (){
+		if(jQuery('#lightgallery, .lightgallery').length>0) {
+			$('#lightgallery, .lightgallery').lightGallery({
+				thumbnail:true,
+			});
+		}
+	}
+  
+  
+  var reviewCarousel = function (){
+    /*  testimonial one function by = owl.carousel.js */
+    /*  testimonial one function by = owl.carousel.js */
+    if($('.testimonial-one').length > 0) {
+      $('.testimonial-one').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        center:true,
+        dots: false,
+        navText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'],
+        responsive:{
+          0:{
+            items:2
+          },
+          400:{
+            items:3
+          },	
+          700:{
+            items:5
+          },	
+          991:{
+            items:6
+          },			
+          
+          1200:{
+            items:4
+          },
+          1600:{
+            items:5
+          }
+        }
+      });
+    }
+  }
+
+  var cardsCarousel = function (){
+    
+    if($('.cards').length > 0) {
+      jQuery('.cards').owlCarousel({
+				loop:true,
+				margin:30,
+				nav:true,
+				autoWidth:true,
+				center:true,
+				dots: false,
+        navText: ['', ''],
+			})
+    }
+  }
+	/* Function ============ */
+	return {
+		init:function(){
+			handleSelectPicker();
+			handleTheme();
+			handleMetisMenu();	
+			handleAllChecked();	
+			handleNavigation();
+			handleCurrentActive();
+			handleCustomFileInput();
+			handleMiniSidebar();
+			handleMinHeight();
+			handleDataAction();
+			handleHeaderHight();
+			handledzScroll();
+			handleMenuTabs();
+			handleChatbox();
+			handleBtnNumber();
+			handledzChatUser();
+			handledzLoadMore();
+			handledzFullScreen();
+			handlePerfectScrollbar();
+			handleheartBlast();
+			handleshowPass();
+			handleLightgallery();
+			reviewCarousel();
+			cardsCarousel();
+		},
+
+		
+		load:function(){
+			handleSelectPicker();
+			handleTheme();
+		},
+		
+		resize:function(){
+			
+			
+		},
+    
+	}
+	
+();
+        
+        
+    </script>
+  <script type="text/javascript">
+    function scrollToTop() {  
+                window.scrollTo({ top: 0, behavior: 'smooth' });  
+            }  
+    
+    function scrollToBottom() {  
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });  
+            }
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+
+
+ 
+    </script>
+       
+      
+
+</body>
+
+</html>

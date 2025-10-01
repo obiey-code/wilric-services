@@ -1,0 +1,35 @@
+
+BASE DE DONNEE wilric_services
+
+CREATE TABLE emploiStage (  
+    id INT AUTO_INCREMENT PRIMARY KEY,      -- ID unique pour identifier chaque entrée  
+    nom VARCHAR(100) NOT NULL,              -- Nom, jusqu'à 100 caractères, ne peut pas être nul  
+    email VARCHAR(100) NOT NULL UNIQUE,     -- Email, jusqu'à 100 caractères, doit être unique  
+    numero VARCHAR(15),                      -- Numéro de téléphone, jusqu'à 15 caractères  
+    textes TEXT NOT NULL,                   -- Notes ou autres textes, de type TEXT  
+    motivation TEXT NOT NULL,               -- Lettre de motivation, de type TEXT  
+    cv TEXT NOT NULL,                       -- CV en texte, de type TEXT  
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Date et heure d'enregistrement  
+);  
+
+CREATE TABLE CONTACT (  
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Colonne ID pour identifier chaque entrée  
+    nom VARCHAR(100) NOT NULL,           -- Colonne pour le nom, jusqu'à 100 caractères  
+    email VARCHAR(100) NOT NULL,         -- Colonne pour l'email, jusqu'à 100 caractères  
+    telephone VARCHAR(15),                -- Colonne pour le téléphone, jusqu'à 15 caractères  
+    objet VARCHAR(255) NOT NULL,         -- Colonne pour l'objet, jusqu'à 255 caractères  
+    textes TEXT NOT NULL,                  -- Colonne pour le texte (message), de type TEXT  
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Date et heure de création  
+); 
+
+
+
+
+
+super user
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'wilricservice@25';  
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;  
+FLUSH PRIVILEGES;   
+
+

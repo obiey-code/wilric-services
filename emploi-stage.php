@@ -1,0 +1,147 @@
+<?php
+// Informations de connexion à la base de données
+$serveur = "localhost";
+$utilisateur = "root";
+$mot_de_passe = "";
+$base_de_donnees = "wilric_services";
+
+
+
+try {
+    
+    // Connexion à la base de données avec PDO
+    $connexion = new PDO("mysql:host=$serveur;dbname=$base_de_donnees", $utilisateur, $mot_de_passe);
+    // Configuration pour afficher les erreurs PDO
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Récupération des données du formulaire
+    
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $numero = $_POST['numero'];
+    $textes = $_POST['message'];
+    $motivation = $_FILES["motivation"];
+    $cv = $_FILES["cv"];
+
+
+
+    // Dossier de destination pour les fichier téléchargés
+    $dossier_destination1= "motivation/";
+
+    //Verifier si le dossier de destination existe, sinon le créer
+    if (! file_exists($dossier_destination1)){
+        mkdir($dossier_destination1, 0777, true);
+    }
+
+    //Verifier si un fichier a été téléchargé
+   if(isset($_FILES["motivation"])){
+    $motivation = $_FILES["motivation"];
+}
+
+
+     //Générer un nom de fichier unique
+   $nom_motivation = uniqid(). "_" . basename($motivation["name"]);
+   $chemin_destination1 = $dossier_destination1 . $nom_motivation;
+
+
+   //Deplacer le fichier telecharger vers le dossier de destination 
+   if (move_uploaded_file($motivation["tmp_name"], $chemin_destination1)){
+
+    //Préparer et excécuter la requete sql pour inserer le chemin du fichier 
+    $requete = $connexion->prepare("INSERT INTO emploiStage (motivation)  VALUES (:motivation)");
+   
+
+
+ 
+         echo "Fichier  motivation télécharger et chemin enregistrer dans la base de donnees.";
+ 
+     }
+     else{
+         echo "Aucun fichier motivation sélectionné.";
+     }
+
+
+
+
+     
+   
+
+
+
+
+    // Dossier de destination pour les fichier téléchargés
+    $dossier_destination2= "cv/";
+
+    //Verifier si le dossier de destination existe, sinon le créer
+    if (! file_exists($dossier_destination2)){
+        mkdir($dossier_destination2, 0777, true);
+    }
+
+    //Verifier si un fichier a été téléchargé
+   if(isset($_FILES["cv"])){
+    $cv = $_FILES["cv"];
+}
+
+
+     //Générer un nom de fichier unique
+   $nom_cv = uniqid(). "_" . basename($cv["name"]);
+   $chemin_destination2 = $dossier_destination2 . $nom_cv;
+
+
+   //Deplacer le fichier telecharger vers le dossier de destination 
+   if (move_uploaded_file($cv["tmp_name"], $chemin_destination2)){
+
+    //Préparer et excécuter la requete sql pour inserer le chemin du fichier 
+
+   
+
+
+ 
+         echo "Fichier  motivation télécharger et chemin enregistrer dans la base de donnees.";
+ 
+     }
+     else{
+         echo "Aucun fichier motivation sélectionné.";
+     }
+
+
+
+
+     
+
+
+
+    // Préparation de la requête SQL
+    $requete = $connexion->prepare("INSERT INTO emploiStage (nom, email,numero,textes,motivation, cv) VALUES (:nom, :email, :numero, :textes, :motivation, :cv)");
+
+    // Liaison des paramètres
+    $requete->bindParam(':nom', $nom);
+    $requete->bindParam(':email', $email);
+    $requete->bindParam(':numero', $numero);
+    $requete->bindParam(':textes', $textes);
+    $requete ->bindParam(':motivation', $chemin_destination1);
+    $requete ->bindParam(':cv', $chemin_destination2);
+
+
+
+    // Exécution de la requête
+    $requete->execute();
+    
+    echo "Nouvel enregistrement ajouté avec succès";
+
+
+    header("Location: emploi-stage.html");
+
+    
+    exit;
+}
+
+
+catch(PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
+}
+
+//    / Fermeture de la connexion
+$connexion = null;
+
+?>

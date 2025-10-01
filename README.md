@@ -1,0 +1,1 @@
+"# wilric-services"  git init git add README.md git commit -m "premier commit" git branch -M main git remote add origine https://github.com/obiey-code/wilric-services.git  git push -u origine principale

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>WILRIC SERVICES|Entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore.</title>
+   
+    <meta name="description" content="WILRIC SERVICES, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore."/>
+    <link rel="canonical" href="WILRIC SERVICE" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WILRIC SERVICES - Entreprise de prestation des services qui intervient sur l'ensemble des secteurs public et privé,..." />
+    <meta property="og:description" content="WILRIC SERVICES, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore." />
+    <meta property="og:url" content="WILRIC SERVICE" />
+    <meta property="og:site_name" content="WILRIC SERVICES"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="WILRIC SERVICES, une entreprise spécialisée dans le BTP, le génie civil et l'industrie, opérant aussi bien onshore qu'offshore." />
+    <meta name="twitter:title" content="WILRIC SERVICES - Entreprise de prestation des services qui intervient sur l'ensemble des secteurs public et privé,..." />
+    
+    <!-- favicon -->
+    <link rel=icon href="hamsterlecurieux/images/LOGO WILRIC.png" sizes="20x20" type="image/png">
+    <!-- animate -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/animate.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/owl.carousel.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/font-awesome.min.css">
+    <!-- flaticon -->
+    <link rel="stylesheet" href="hamsterlecurieux/fonts/flaticon.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="hamsterlecurieux/css/style.css">
+    <link rel="stylesheet" href="hamsterlecurieux/css/slider-css.css">
+    <link rel="stylesheet" href="hamsterlecurieux/css/boostrap-select.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style type="text/css">
+stackpath.bootstrapcdn.com
+
+@import url('fonts.googleapis/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+.slider{
+  position: relative;
+     background: #8080805e;
+  width: 100%;
+  min-height: 500px; 
+  
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%; 
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+   
+  }
+}
+
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+     
+    li a{text-transform: uppercase;}
+    .backg{background-color: #2eae0c; color: #fff}
+    .backg:hover{background-color: #0f3aaa; color: #fff}
+
+
+
+
+
+
+</style>
+
+<body id="default-home">
+
+    <!-- Header info start -->
+    <section id="header-info"  >
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12 " >
+                        <div class="header-top-left  ">
+                            <ul class="d-lg-flex d-md-flex " >
+                                <li >
+                                    <p ><i class="fa fa-phone "> </i>(+242) 05 696 14 35</p>
+
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope"></i>wilricservices@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-map-marker"></i>Pointe-Noire & Brazzaville</p>
+                            </ul>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="header-top-right xs-mt-10">
+                            <ul class="d-flex justify-content-lg-end justify-content-center">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-5">
+                        <div class="logo-wrapper " >
+                            <a href="index.html" class="logo">
+                                <img src="hamsterlecurieux/images/logo_wilric.png" alt="" width="65%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header-open-time">
+                            <ul class="d-flex justify-content-center align-items-center">
+                                <li>
+                                    <div class="header-open-time-icon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-open-time-content">
+                                        <strong>Horaires d&apos;ouverture </strong>
+                                        <span>Lun -Ven: 08:00 - 12:00 - 13:00 - 17:00 </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header info end -->
+
+    <!-- Header start -->
+    <header class="header-area">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-lg-12 col-md-12" style="height:75px">
+                    <div class="header-content">
+                        <a class="header-toggle-menu" style="color:#fff" href="#0" title="Menu"><span><i class="fa fa-bars"></i></span></a>
+                        <nav class="header-nav-wrap">
+                            <h2 class="header-nav-heading h6">Site Navigation</h2>
+                            <br/><ul class="header-nav">
+                                <li>
+                                    <a class="" href="index.html" title="">Accueil</a>
+                                </li>
+                                <li><a href="a-propos.html">A propos</a></li>
+                                <li>
+                                    <a class="" href="nos-metiers.html" title="">Nos métiers</a>
+                                </li>
+                                
+                                <li>
+                                    <a class="" href="contact.html" title="">Contact</a>
+                                </li>
+
+                                <li>
+
+                                    
+                                    <a class="" href="emploi-stage.html">Emploi / stage</a>
+                                </li>
+                            </ul>
+                            <a href="#0" title="Close Menu" class="header-overlay-close close-mobile-menu">Close</a>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+    <!-- Header end -->
+
+    <!-- Banner start -->
+    <div id="banner-section" class="banner-area" data-jarallax='{"speed": 0.6}'>
+        <div class="banner-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrubms text-center">
+                            <h1 class="title">Témoignages</h1>
+                            <ul class="d-flex justify-content-center">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li> | </li>
+                                <li><a class="active">Témoignage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner end -->
+
+    <!-- Customer review start -->
+    <section id="customer-review" class="customer-review-area mt-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title customer-review-title section-title-width section-title-auto text-center pb-30">
+                        <h2 class="title"><span>Nos clients</span> parlent de nous</h2>
+                        <p class="text"> Lisez ce que pensent nos clients et partenaires de nos prestations</p>
+                    </div>
+                </div>
+                
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="customer-review-item mt-30">
+                        <div class="icon">
+                            <i class="flaticon-right-quote"></i>
+                        </div>
+                        <div class="customer-img">
+                            <img src="hamsterlecurieux/Admin/uploads/temoignage/temoignage_img_websoft_enterprise_167horia-prossaird-twitter.jpg" alt="temoignage img" class="img-fluid">
+                        </div>
+                        <div class="content mt-30">
+                            <!-- <h5 class="title"></h5> -->
+                            <p class="text mt-15">Je conseille vivement WILRIC SERVICES pour tous ceux qui sont à l&#39;étranger et qui souhaitent réaliser leur projet de construction au pays et ce en tout sécurité et en toute fiabilité</p>
+                            <div class="customer-info mt-15">
+                                <span class="customer-name">Horia Prossaird CEO chez HPP Coaching</span>
+                            </div>
+                            <div class="customer-rating mt-15">
+                                <ul class="d-flex">
+                                    <li><i class="flaticon-star-1"></i></li>
+                                    <li><i class="flaticon-star-1"></i></li>
+                                    <li><i class="flaticon-star-1"></i></li>
+                                    <li><i class="flaticon-star-1"></i></li>
+                                    <li><i class="flaticon-star-1"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section><br/>
+    <!-- Customer review end -->     <!-- Footer start --><br/>
+    <footer id="footer-section" class="footer-area" >
+        
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-6" >
+                  <div class="" >
+                      <a href="index.html" class="logo" style="width: 15%;">
+                          <img src="hamsterlecurieux/images/wilric service NB.png" width="80%" alt="">
+                      </a>
+                  </div>
+                  <div class="">
+                  <div class="footer-widget widget footer-contact solutions ">
+
+                  
+                      <h4  class="widget-title mb-20">Nos coordonnées </h4>
+                      <div class="">
+<p class="email"><i class="fa fa-newspaper"></i> RCCM: CG-PNR-01-2023-B12-00083 </p>
+                          <p class="email"><i class="fa fa-newspaper"></i> NIU: M23000000295227T</p>
+                          <p class="email"><i class="fa fa-envelope"></i> wilricservices@gmail.com</p>
+                          <p class="phone"><i class="fa fa-phone"></i> (+242) 05 696 14 35</p>
+                          <p class="address"><a href="localisation.html"><i class="fa fa-map-marker"></i> 51 Rue d'Ombélé quartier OCH (Arrêt Noëly), Pointe-Noire |
+1234 Rue Mayombe, Avenue Loutassi au Plateau des 15 ans Brazzaville</a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+              <div class="col-lg-4 col-md-6 text-center" style="margin-top: 10%;">
+                  <div class="footer-widget widget footer-links useful-links xs-mt-50 md-mt-50">
+                      <h4  class="widget-title mb-20 ">Liens utiles </h4>
+                      <div class="">
+                          <ul class="" style="text-transform:none;">
+                              <li><a href="index.html">Accueil</a></li>
+                              <li><a href="a-propos.html">A propos</a></li>
+                              <li><a href="nos-metiers.html">Nos métiers</a></li>
+                              
+                              <li><a href="contact.html">Contact</a></li>
+                              <li><a href="emploi-stage.html">Carrière</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6" style="margin-top: 10%;">
+                  <div class="footer-widget widget">
+                      <h4  class="widget-title mb-25 xs-mt-40 md-mt-50 text-center">Horaire d'ouverture </h4>
+
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Lundi</span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 17:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Mardi </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 17:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Mercredi </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 17:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Jeudi </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 17:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Vendredi </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 17:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Samedi </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">08:00 - 12:00</span>
+                          </span>
+                      </div>
+                      <div class="open-time-item d-flex mt-15">
+                          <span class="open-time-day">Dimanche </span>
+                          <span class="open-time-line">
+                              <span class="open-time-line-inner"></span>
+                          </span>
+                          <span class="open-time-hours">
+                              <span class="open-time-closed">Fermé</span>
+                          </span>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <div class="copyright-area text-center">
+      
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="copyright-area-inner">
+                      <p>&copy; 2025 <b style="color: blue;"> WILRIC SERVICES & DIVERS </b> - Tous droits réservés | Développé par<a href="https://www.facebook.com/share/p/165xJRNriR/" target="_blank"><b>OBIEY Christ Dany</b></a> </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer end -->
+
+  <!-- Back to top start -->
+  <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+  </div>
+  <!-- Back to top end -->
+
+  <!-- Preloader start -->
+  <div class="" id="">
+      <div class="">
+          <div class="center">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <hr/>
+      </div>
+  </div>
+  <!-- Preloader end -->
+
+  <!-- jquery -->
+  <script src="hamsterlecurieux/js/jquery-2.2.4.min.js"></script>
+  <script src="hamsterlecurieux/js/jquery.js"></script>
+  <!-- bootstrap -->
+  <script src="hamsterlecurieux/js/bootstrap.min.js"></script>
+  <!-- Popup video -->
+
+  <!-- counterup -->
+  <script src="hamsterlecurieux/js/jquery.counterup.min.js"></script>
+  <!-- main js -->
+  <script src="hamsterlecurieux/js/main.js"></script>
+  
+  <script src="hamsterlecurieux/js/boostrap-select.min.js"></script>
+  
+  <script src=" code.jquery/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
+
+  <script>
+      // Video Popup
+      $(function() {
+          $("#video").videoPopup({
+              autoplay: 1,
+              controlsColor: 'white',
+              showVideoInformations: 0,
+              width: 1000,
+              customOptions: {
+                  rel: 0,
+                  end: 60
+              }
+          });
+          $("#video2").videoPopup();
+      });
+
+
+      // Accordion
+      $(function() {
+          var Accordion = function(el, multiple) {
+              this.el = el || {};
+              this.multiple = multiple || false;
+
+              // Variables privadas
+              var links = this.el.find('.link');
+              // Evento
+              links.on('click', {
+                  el: this.el,
+                  multiple: this.multiple
+              }, this.dropdown)
+          }
+
+          Accordion.prototype.dropdown = function(e) {
+              var $el = e.data.el;
+              $this = $(this),
+                  $next = $this.next();
+
+              $next.slideToggle();
+              $this.parent().toggleClass('open');
+
+              if (!e.data.multiple) {
+                  $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+              };
+          }
+
+          var accordion = new Accordion($('#accordion'), false);
+      });
+      
+      
+var handleLightgallery = function (){
+  if(jQuery('#lightgallery, .lightgallery').length>0) {
+    $('#lightgallery, .lightgallery').lightGallery({
+      thumbnail:true,
+    });
+  }
+}
+
+
+var reviewCarousel = function (){
+  /*  testimonial one function by = owl.carousel.js */
+  /*  testimonial one function by = owl.carousel.js */
+  if($('.testimonial-one').length > 0) {
+    $('.testimonial-one').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      center:true,
+      dots: false,
+      navText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'],
+      responsive:{
+        0:{
+          items:2
+        },
+        400:{
+          items:3
+        },	
+        700:{
+          items:5
+        },	
+        991:{
+          items:6
+        },			
+        
+        1200:{
+          items:4
+        },
+        1600:{
+          items:5
+        }
+      }
+    });
+  }
+}
+
+var cardsCarousel = function (){
+  
+  if($('.cards').length > 0) {
+    jQuery('.cards').owlCarousel({
+      loop:true,
+      margin:30,
+      nav:true,
+      autoWidth:true,
+      center:true,
+      dots: false,
+      navText: ['', ''],
+    })
+  }
+}
+/* Function ============ */
+return {
+  init:function(){
+    handleSelectPicker();
+    handleTheme();
+    handleMetisMenu();	
+    handleAllChecked();	
+    handleNavigation();
+    handleCurrentActive();
+    handleCustomFileInput();
+    handleMiniSidebar();
+    handleMinHeight();
+    handleDataAction();
+    handleHeaderHight();
+    handledzScroll();
+    handleMenuTabs();
+    handleChatbox();
+    handleBtnNumber();
+    handledzChatUser();
+    handledzLoadMore();
+    handledzFullScreen();
+    handlePerfectScrollbar();
+    handleheartBlast();
+    handleshowPass();
+    handleLightgallery();
+    reviewCarousel();
+    cardsCarousel();
+  },
+
+  
+  load:function(){
+    handleSelectPicker();
+    handleTheme();
+  },
+  
+  resize:function(){
+    
+    
+  },
+  
+}
+
+();
+      
+      
+  </script>
+<script type="text/javascript">
+  const slider = document.querySelector(".slider");
+  const nextBtn = document.querySelector(".next-btn");
+  const prevBtn = document.querySelector(".prev-btn");
+  const slides = document.querySelectorAll(".slide");
+  const slideIcons = document.querySelectorAll(".slide-icon");
+  const numberOfSlides = slides.length;
+  var slideNumber = 0;
+
+  //image slider next button
+  nextBtn.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+
+    slideNumber++;
+
+    if(slideNumber > (numberOfSlides - 1)){
+      slideNumber = 0;
+    }
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  });
+
+  //image slider previous button
+  prevBtn.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+
+    slideNumber--;
+
+    if(slideNumber < 0){
+      slideNumber = numberOfSlides - 1;
+    }
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  });
+
+  //image slider autoplay
+  var playSlider;
+
+  var repeater = () => {
+    playSlider = setInterval(function(){
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    }, 4000);
+  }
+  repeater();
+
+  //stop the image slider autoplay on mouseover
+  slider.addEventListener("mouseover", () => {
+    clearInterval(playSlider);
+  });
+
+  //start the image slider autoplay again on mouseout
+  slider.addEventListener("mouseout", () => {
+    repeater();
+  });
+  </script>
+    
+
+</body>
+
+</html>
